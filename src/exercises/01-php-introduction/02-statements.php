@@ -30,18 +30,21 @@
 
         $age = rand(0,99);
 
-        echo "Your age is $age.";
-        if ($age > 0 and $age =< 12) {
+        echo "Your age is $age. ";
+        if ($age > 0 and $age <= 12) {
             echo "You are a You are a child";
         } 
-        else if ($age > 12 and $age =< 19){
+        else if ($age > 12 and $age <= 19){
             echo "You are a teenager";
         }
-        else if ($age > 19 and $age =< 64){
+        else if ($age > 19 and $age <= 64){
             echo "You are an adult";
         }
         else if ($age > 64){
             echo "You are a senior";
+        }
+        else {
+            echo "Error: Invalid age.";
         }
 
         ?>
@@ -60,6 +63,32 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        $day = rand(1,7);
+
+        switch($day){
+            case(1):
+                echo "The $day" . "st day of the week is Monday, a weekday.";
+                break;
+            case(2):
+                echo "The $day" . "nd day of the week is Tuesday, a weekday.";
+                break;
+            case(3):
+                echo "The $day" . "rd day of the week is Wednesday, a weekday.";
+                break;    
+            case(4):
+                echo "The $day" . "th day of the week is Thursday, a weekday.";
+                break;
+            case(5):
+                echo "The $day" . "th day of the week is Friday, a weekday.";
+                break;
+            case(6):
+                echo "The $day" . "th day of the week is Saturday, a weekend.";
+                break; 
+            case(7):
+                echo "The $day" . "th day of the week is Sunday, a weekend.";
+                break;  
+        }
         ?>
     </div>
 
@@ -75,6 +104,14 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+        $x = rand(2,10);
+        echo "creating a multiplication table for the number $x" . "<br>";
+
+        for ($y = 1; $y < 13 ; $y++) {
+            $z = ($x * $y);
+            echo "$x * $y = $z" . "<br>";
+        }
+
         ?>
     </div>
 
@@ -90,6 +127,14 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        $countdown = 10;
+        echo "Starting countdown..." . "<br>";
+        while($countdown > 0) {
+            echo "$countdown" . "..." . "<br>";
+            $countdown-- ;
+        }
+        echo "Blast off!";
         ?>
     </div>
 
