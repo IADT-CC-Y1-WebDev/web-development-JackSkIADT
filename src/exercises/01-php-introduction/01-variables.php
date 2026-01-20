@@ -50,6 +50,30 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        $price1 = 10.50;
+        $price2 = 2.50;
+        $price3 = 3.25;
+
+        $quantity1 = 3;
+        $quantity2 = 19;
+        $quantity3 = 8;
+
+        $subtotal1 = $price1*$quantity1;
+        $subtotal2 = $price2*$quantity2;
+        $subtotal3 = $price3*$quantity3;
+
+        $totalcost = $subtotal1 + $subtotal2 + $subtotal3;
+        $finalprice = $totalcost * .9;
+
+        echo "Item 1 costs €$price1. You have bought $quantity1 of them." ."<br>";
+        echo "Item 2 costs €$price2 You have bought $quantity2 of them." . "<br>";
+        echo "Item 3 costs €$price3 You have bought $quantity3 of them." . "<br>";
+
+        echo "The total cost of these items is €$totalcost." . "<br>";
+        
+
+        echo "Applying a 10% discount, the final price is €$finalprice." . "<br>";
         ?>
     </div>
 
@@ -65,6 +89,15 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        $isStudent = true;
+        $hasDiscount = true;
+        $isPremiumMember = false;
+
+        echo "Is user a student? " . ($isStudent ? "Yes" : "No") . "<br>";
+        echo "Does user have a discount? " . ($hasDiscount ? "Yes" : "No") . "<br>";
+        echo "You are " . ($isPremiumMember ? "" : "not ") . "a premium member." . "<br>";
+
         ?>
     </div>
 
