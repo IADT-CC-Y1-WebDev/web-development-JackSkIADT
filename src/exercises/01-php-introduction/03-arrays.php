@@ -49,6 +49,18 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        $student = [
+            "name" => "Jack",
+            "studentId" => "n00256110",
+            "course" => "Creative Computing",
+            "grade" => "85"
+        ];
+
+        $text =
+        
+        "My name is {$student['name']}. My student ID number is {$student['studentId']}. I'm studying {$student['course']} and my grade is {$student['grade']}.";
+        print("<p>$text</p>")
         ?>
     </div>
 
@@ -65,6 +77,20 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        $capitals = [
+            "Ireland" => "Dublin",
+            "France" => "Paris",
+            "Germany" => "Berlin",
+            "Italy" => "Milan",
+            "Norway" => "Oslo"
+        ];
+
+        echo "<ul>";
+        foreach ($capitals as $country => $capital){
+            echo "<li>$capital is the capital of $country.";
+        }
+        echo "</ul>";
         ?>
     </div>
 
@@ -82,6 +108,20 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        $menu = [
+            'starters' => [
+                
+
+            ],
+            'main courses' => [
+
+            ],
+            'desserts' => [
+
+            ]
+
+        ]
         ?>
     </div>
 
