@@ -27,6 +27,11 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        print "<b>php source: </b>" . $_SERVER['PHP_SELF'] . "<br>";
+        print "<b>request method: </b>" . $_SERVER['REQUEST_METHOD'] . "<br>";
+        print "<b>http host: </b>" . $_SERVER['HTTP_HOST'] . "<br>";
+        print "<b>http user agent: </b>" . $_SERVER['HTTP_USER_AGENT'] . "<br>";
         ?>
     </div>
 
@@ -43,6 +48,13 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        if ($_GET['name'] != "") {
+        print ($_GET[name]);
+         }
+         else {
+            print "guest";
+         }
         ?>
     </div>
 

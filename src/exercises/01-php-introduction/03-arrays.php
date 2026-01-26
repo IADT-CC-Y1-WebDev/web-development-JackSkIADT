@@ -42,7 +42,7 @@
     <p>
         <strong>Task:</strong> 
         Create an associative array for a student with keys: name, studentId, 
-        course, and grade. Display this information in a formatted sentence.
+        course, and grade. Display this information in a formatted sentence. 
     </p>
 
     <p class="output-label">Output:</p>
@@ -111,17 +111,81 @@
 
         $menu = [
             'starters' => [
-                
-
+                [
+                    'name' => 'soup of the day',
+                    'price' => '3.50'
+                ],
+                [
+                    'name' => 'fried calamari',
+                    'price' => '7.00'
+                ],
+                [
+                    'name' => 'toasted foccacia',
+                    'price' => '4.75'
+                ]                
             ],
             'main courses' => [
-
+                [
+                    'name' => 'grilled ribeye',
+                    'price' => '28.00'
+                ],
+                [
+                    'name' => 'coconut monkfish',
+                    'price' => '19.00'
+                ],
+                [
+                    'name' => 'ratatouille',
+                    'price' => '16.00'
+                ]
             ],
             'desserts' => [
-
+                [
+                    'name' => 'ice cream selection',
+                    'price' => '5.00'
+                ],
+                [
+                    'name' => 'tiramisu',
+                    'price' => '7.50'
+                ],
+                [
+                    'name' => 'carrot cake',
+                    'price' => '7.50'
+                ]
             ]
 
-        ]
+                ]; //menu end
+        
+
+        echo "<ul>";
+        
+        echo "Starters:" . "<br>";
+
+        for ($i = 0; $i < count($menu); $i++) {
+        echo "<li>" . $menu ['starters'][$i]['name'] . " - price: €" . $menu ['starters'][$i]['price'];
+        }
+
+        echo "<br>";
+        echo "<br>";
+        echo "Main Courses:"  . "<br>";
+
+        for ($i = 0; $i < count($menu); $i++) {
+        echo "<li>" . $menu ['main courses'][$i]['name'] . " - price: €" . $menu ['main courses'][$i]['price'];
+        }
+
+        echo "<br>";
+        echo "<br>";
+        echo "Desserts:"  . "<br>";
+
+        for ($i = 0; $i < count($menu); $i++) {
+        echo "<li>" . $menu ['desserts'][$i]['name'] . " - price: €" . $menu ['desserts'][$i]['price'];
+        }        
+
+
+
+
+
+        echo "</ul>";
+
         ?>
     </div>
 
