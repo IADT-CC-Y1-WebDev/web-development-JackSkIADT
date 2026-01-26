@@ -49,11 +49,11 @@
         <?php
         // TODO: Write your solution here
 
-        if ($_GET['name'] != "") {
-        print ($_GET[name]);
+        if (isset($_GET["name"])) {
+        print "Hello, " . ($_GET['name']) . "!";
          }
          else {
-            print "guest";
+            print "Hello, Guest!";
          }
         ?>
     </div>
@@ -72,6 +72,19 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        if ( isset($_GET['product']) && (isset($_GET['quantity'])) ) {
+            print "You ordered" .  $_GET['quantity'] . " " . $_GET['product'] . "(s).";
+        }
+        else if ( isset($_GET['product']) == false && (isset($_GET['quantity'])) == false ) {
+            print "error: missing product and quantity parameters.";
+        }
+        else if ( isset($_GET['product']) == false ){
+            print "error: missing product parameter.";
+        }
+        else if ( isset($_GET['quantity']) == false ){
+            print "error: missing quantity parameter.";
+        }        
         ?>
     </div>
 
