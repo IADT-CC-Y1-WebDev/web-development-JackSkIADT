@@ -25,6 +25,15 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+    function celsiusToFahrenheit($c){
+        $f = (($c*9/5 ) + 32);
+        return $f;
+    }
+
+    $input = rand(-50,150);
+
+    echo $input . " degrees celsius is equal to " . celsiusToFahrenheit($input) . " degrees farenheit." ; 
         ?>
     </div>
 
@@ -41,6 +50,28 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        function calculateRectangleArea($w, $h = null){
+            if(!isset($h)){
+                $a = $w * $w;
+            }
+            else {
+                $a = $w * $h;
+            }
+            return $a;
+        }
+
+        $input1 = rand(1,100);
+        $input2 = rand(1,100);
+
+        if(rand(0,1)){
+            echo "A rectangle with width " . $input1 . " and height " . $input2 . " has an area of " .calculateRectangleArea($input1,$input2) . ".";
+        }
+        else {
+            echo "A square with width and height " . $input1 . " has an area of " . calculateRectangleArea($input1) . "." ;
+        }
+    
+
         ?>
     </div>
 
@@ -57,6 +88,19 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        function checkEvenOdd($num){
+            if($num%2 === 0){
+                return "even";
+            }
+            else {
+                return "odd";
+            }
+        }
+
+        $input3 = rand(1,50);
+    
+        echo "$input3 is " . checkEvenOdd($input3) . ".";
         ?>
     </div>
 
@@ -73,6 +117,24 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        $numbers = [2,5,13,16,25];
+        function getArrayStats($numberset){
+            $min = min($numberset);
+            $max = max($numberset);
+            $avg = 0;
+            for($i =0; $i < count($numberset); $i++){
+                $avg += $numberset[$i];
+            }
+            $avg /= count($numberset);
+            return [$min, $max, $avg];
+        }
+
+        [$minimum, $maximum, $average] = getArrayStats($numbers);
+
+        echo "The smallest value in the array is $minimum.";
+        echo "The largest value in the array is $maximum.";
+        echo "The average value in the array is $average.";
         ?>
     </div>
 

@@ -74,7 +74,7 @@
         // TODO: Write your solution here
 
         if ( isset($_GET['product']) && (isset($_GET['quantity'])) ) {
-            print "You ordered" .  $_GET['quantity'] . " " . $_GET['product'] . "(s).";
+            print "You ordered " .  $_GET['quantity'] . " " . $_GET['product'] . "(s).";
         }
         else if ( isset($_GET['product']) == false && (isset($_GET['quantity'])) == false ) {
             print "error: missing product and quantity parameters.";
