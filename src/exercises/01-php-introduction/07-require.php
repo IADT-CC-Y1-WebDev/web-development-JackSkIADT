@@ -22,6 +22,12 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        require 'inc/navigation.php';
+        "<br>";
+        echo "this is the middle content of the page";
+          "<br>";
+          require 'inc/navigation.php';
         ?>
     </div>
 
