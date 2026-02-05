@@ -39,6 +39,21 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+        require_once 'lib/utilities.php';
+
+        $truncatedText1 = truncate("Hello, my name is Jack.", 13);
+        $truncatedText2 = truncate("Nice to meet you.", 6);
+
+        $totalMoney1 = formatPrice(23576);
+        $totalMoney2 = formatPrice(355.97);
+
+        echo "<p>Truncated text 1: $truncatedText1</p>";
+        echo "<p>Truncated text 2: $truncatedText2</p>";
+
+        echo "<p>Total Money 1: $totalMoney1</p>";
+        echo "<p>Total Money 2: $totalMoney2</p>";
+
+        getCurrentYear();
         ?>
     </div>
 
