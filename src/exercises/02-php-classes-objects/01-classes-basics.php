@@ -35,6 +35,16 @@
         // Step 2: Require the file
         // require_once __DIR__ . '/classes/Student.php';
         // Step 3: Create a student and display their details
+
+        require_once 'classes/student.php';
+
+        $student = new Student(null,null);
+        $student-> name = "Jack";
+        $student-> number = "n00256110";
+
+        echo "Name: " . $student->name . "<br>";
+        
+        echo "Number: " . $student->number;
         ?>
     </div>
 
@@ -55,6 +65,17 @@
         <?php
         // TODO: Write your solution here
         // require_once __DIR__ . '/classes/Student.php';
+
+        require_once 'classes/student.php';
+
+        $student1 = new Student("John",12356);
+        $student2 = new Student("Sarah",40056);
+
+        echo "<p>Name: " . $student1->name . "</p>";
+        echo "<p>Number: " . $student1->number . "</p>";
+
+        echo "<p>Name: " . $student2->name . "</p>";
+        echo "<p>Number: " . $student2->number . "</p>";
         ?>
     </div>
 

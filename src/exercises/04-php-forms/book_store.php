@@ -51,6 +51,16 @@ try {
     // extraction:
     // 'format_ids' => $_POST['format_ids'] ?? []
 
+    $data = [ 
+       'title' => $_POST['title'] ?? null, 
+       'author' => $_POST['author'] ?? null, 
+       'publisher_id' => $_POST['publisher_id'] ?? null, 
+       'year' => $_POST['year'] ?? null, 
+       'isbn' => $_POST['isbn'] ?? null, 
+       'format_ids' => $_POST['format_ids'] ?? null, 
+       'description' => $_POST['description'] ?? null, 
+    ];
+    dd($data);
 
     // =========================================================================
     // STEP 4: Validate Data
@@ -60,7 +70,24 @@ try {
     // TODO: Check validation data against the rules
     // Create validator and check if validation fails; if so, store the first 
     // error for each field in the $errors array and throw an exception
+    $year = date("Y");
+        $rules = [
+       'title' => "required|nonempty|min:5|max:255",
+       'author' => "required|nonempty|min:5|max:255",
+       'publisher_id' => "required|nonempty|integer",
+       'year' => "required|nonempty|integer|minvalue:1900|maxvalue:" . $year,
+       'isbn' => "required|nonempty|min:13|max:13",
+       'format_ids' =>  "required|nonempty|array|min:1|max:4",
+       'description' => "required|nonempty|min:10"
+        ];
 
+        $validator = new Validator($data, $rules);
+
+        if($validator->fails()) {
+            dd($validator->errors(), true);
+        }
+
+        echo "Validation successful!";
 
     // =========================================================================
     // STEP 9: File Uploads
