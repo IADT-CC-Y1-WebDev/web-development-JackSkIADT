@@ -98,8 +98,8 @@
         // require_once __DIR__ . '/classes/Student.php';
         require_once 'classes/student.php';
 
-        
-
+        echo "<p> Student " .  $student1->getName() . " has number " . $student1->getNumber() ."</p>";
+        echo "<p> Student " .  $student2->getName() . " has number " . $student2->getNumber() ."</p>";
         ?>
     </div>
 
