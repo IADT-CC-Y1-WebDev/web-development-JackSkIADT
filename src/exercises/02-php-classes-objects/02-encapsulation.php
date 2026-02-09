@@ -35,6 +35,15 @@
         <?php
         // TODO: Write your solution here
         // require_once __DIR__ . '/classes/Student.php';
+        require_once 'classes/student.php';
+        $student1 = new Student("Johnny",12356777);
+        $student2 = new Student("Sariah",40056777);
+
+
+        echo "<p> Student " .  $student1->getName() . " has number " . $student1->getNumber() ."</p>";
+        echo "<p> Student " .  $student2->getName() . " has number " . $student2->getNumber() ."</p>";
+
+        // echo $student1->name; inaccessible private variable
         ?>
     </div>
 
@@ -56,6 +65,9 @@
         <?php
         // TODO: Write your solution here
         // require_once __DIR__ . '/classes/Student.php';
+
+        $student3 = new Student("Isaac","015");
+        echo "<p> Student " .  $student3->getName() . " has number " . $student3->getNumber() ."</p>";
         ?>
     </div>
 
