@@ -87,6 +87,16 @@ try {
             dd($validator->errors(), true);
         }
 
+
+    //     if ($validator->fails()) {
+    //     // Get first error for each field
+    //     foreach ($validator->errors() as $field => $fieldErrors) {
+    //         $errors[$field] = $fieldErrors[0];
+    //     }
+    //     throw new Exception('Validation failed.');
+    // }
+
+
         echo "Validation successful!";
 
     // =========================================================================
@@ -128,14 +138,14 @@ catch (Exception $e) {
     // =========================================================================
     // TODO: In the catch block, store validation errors in the session
     // TODO: Redirect back to the form
-
+    setFormErrors($errors);
 
     // =========================================================================
     // STEP 6: Store Form Data for Repopulation
     // See: /examples/04-php-forms/step-06-repopulate-fields/
     // =========================================================================
     // TODO: Before redirecting on error, also store the form data
-
+    setFormData($data);
 
     // =========================================================================
     // STEP 8: Flash Messages
@@ -143,5 +153,6 @@ catch (Exception $e) {
     // =========================================================================
     // TODO: On validation error, you set an error flash message
 
+    redirect("book_create.php");
     
 }

@@ -11,7 +11,11 @@ class Student {
     }
 
     public function getName() {
-        
+        return $this->name;
+    }
+
+    public function getNumber() {
+        return $this->number;
     }
 }
 
