@@ -28,6 +28,13 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
+
+        function calculateSquareRoot($input) {
+            if ($input < 0) {
+                throw new Exception("Cannot calculate square root of a negative number.");
+            }
+            return sqrt($input);
+        }
         ?>
     </div>
 
