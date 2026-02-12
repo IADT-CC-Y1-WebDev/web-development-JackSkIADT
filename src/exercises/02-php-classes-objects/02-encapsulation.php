@@ -64,10 +64,11 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
-        // require_once __DIR__ . '/classes/Student.php';
 
         $student3 = new Student("Isaac","015");
         echo "<p> Student " .  $student3->getName() . " has number " . $student3->getNumber() ."</p>";
+
+
         ?>
     </div>
 
@@ -88,12 +89,13 @@
     <div class="output">
         <?php
         // TODO: Write your solution here
-        // require_once __DIR__ . '/classes/Student.php';
-        // try {
-        //     $student = new Student("Alice", "");
-        // } catch (Exception $e) {
-        //     echo "Error: " . $e->getMessage();
-        // }
+
+        try {
+            $student4 = new Student("Maria");
+        }
+        catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
         ?>
     </div>
 
